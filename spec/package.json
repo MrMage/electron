@@ -9,6 +9,7 @@
   "devDependencies": {
     "@electron-ci/echo": "*",
     "@electron-ci/external-ab": "*",
+    "@electron-ci/get-ax-document": "*",
     "@electron-ci/is-valid-window": "*",
     "@electron-ci/osr-gpu": "*",
     "@electron-ci/uv-dlopen": "*",

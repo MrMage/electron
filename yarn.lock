@@ -658,6 +658,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@electron-ci/get-ax-document@npm:*, @electron-ci/get-ax-document@workspace:spec/fixtures/native-addon/get-ax-document":
+  version: 0.0.0-use.local
+  resolution: "@electron-ci/get-ax-document@workspace:spec/fixtures/native-addon/get-ax-document"
+  languageName: unknown
+  linkType: soft
+
 "@electron-ci/is-valid-window@npm:*, @electron-ci/is-valid-window@workspace:spec/fixtures/native-addon/is-valid-window":
   version: 0.0.0-use.local
   resolution: "@electron-ci/is-valid-window@workspace:spec/fixtures/native-addon/is-valid-window"
@@ -4919,6 +4925,7 @@ __metadata:
   dependencies:
     "@electron-ci/echo": "npm:*"
     "@electron-ci/external-ab": "npm:*"
+    "@electron-ci/get-ax-document": "npm:*"
     "@electron-ci/is-valid-window": "npm:*"
     "@electron-ci/osr-gpu": "npm:*"
     "@electron-ci/uv-dlopen": "npm:*"

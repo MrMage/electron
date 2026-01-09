@@ -1,0 +1,10 @@
+{
+  "name": "@electron-ci/get-ax-document",
+  "version": "0.0.1",
+  "main": "./lib/get-ax-document.js",
+  "private": true,
+  "licenses": "MIT",
+  "scripts": {
+    "install": "node-gyp rebuild"
+  }
+}

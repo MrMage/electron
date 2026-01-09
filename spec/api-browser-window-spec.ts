@@ -5724,6 +5724,28 @@ describe('BrowserWindow module', () => {
           expect(w.getRepresentedFilename()).to.eql('a name');
         });
       });
+
+      ifdescribe(!process.env.ELECTRON_SKIP_NATIVE_MODULE_TESTS)('AXDocument accessibility attribute', () => {
+        it('is set to file URL when representedFilename is set', () => {
+          const w = new BrowserWindow({ show: false });
+          const testPath = '/tmp/test-represented-file.txt';
+          w.setRepresentedFilename(testPath);
+
+          const getAXDocument = require('@electron-ci/get-ax-document');
+          const axDocument = getAXDocument(w.getNativeWindowHandle());
+
+          expect(axDocument).to.equal(`file://${testPath}`);
+        });
+
+        it('is empty when representedFilename is not set', () => {
+          const w = new BrowserWindow({ show: false });
+
+          const getAXDocument = require('@electron-ci/get-ax-document');
+          const axDocument = getAXDocument(w.getNativeWindowHandle());
+
+          expect(axDocument).to.equal('');
+        });
+      });
     });
 
     describe('minimizable state', () => {
